@@ -20,19 +20,6 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
-        // {
-        //   '@vueuse/core': [
-        //     // named imports
-        //     'useMouse', // import { useMouse } from '@vueuse/core',
-        //     // alias
-        //     ['useFetch', 'useMyFetch'], // import { useFetch as useMyFetch } from '@vueuse/core',
-        //   ],
-        //   '[package-name]': [
-        //     '[import-names]',
-        //     // alias
-        //     ['[from]', '[alias]'],
-        //   ],
-        // },
       ],
       dirs: ['./composables'],
       vueTemplate: true,
