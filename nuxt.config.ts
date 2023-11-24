@@ -5,12 +5,10 @@ export default defineNuxtConfig({
   components: {
     dirs: [
       {
-        path: '~/components',
+        path: "~/components",
         pathPrefix: false,
       },
     ],
   },
-  modules: [
-    '@nuxt/devtools',
-  ]
-})
+  modules: ["@nuxt/devtools", "@nuxtjs/storybook"],
+});

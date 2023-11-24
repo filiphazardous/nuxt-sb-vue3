@@ -14,19 +14,19 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.3",
-    "@storybook/addon-essentials": "7.5.1",
-    "@storybook/addon-interactions": "7.5.1",
-    "@storybook/addon-links": "7.5.1",
-    "@storybook/blocks": "7.5.1",
+    "@nuxtjs/storybook": "^7.0.0",
+    "@storybook-vue/nuxt": "^0.2.0",
+    "@storybook/addon-essentials": "7.5.3",
+    "@storybook/addon-interactions": "7.5.3",
+    "@storybook/addon-links": "7.5.3",
+    "@storybook/blocks": "7.5.3",
     "@storybook/testing-library": "^0.2.2",
-    "@storybook/vue3": "7.5.1",
-    "@storybook/vue3-vite": "7.5.1",
     "@unionen/icons": "^1.1.4",
     "nuxt": "^3.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storybook": "7.5.1",
-    "storybook-addon-vue-slots": "0.9.21",
+    "storybook": "7.5.3",
+    "storybook-addon-vue-slots": "0.9.25",
     "typescript": "^5.3.2",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
@@ -39,17 +39,7 @@
     "overrides": {
       "@babel/plugin-proposal-class-properties": "npm:@babel/plugin-transform-class-properties",
       "@babel/plugin-proposal-optional-chaining": "npm:@babel/plugin-transform-optional-chaining",
-      "@babel/plugin-proposal-nullish-coalescing-operator": "npm:@babel/plugin-transform-nullish-coalescing-operator",
-      "storybook": "7.5.1",
-      "@storybook/builder-vite": "7.5.1",
-      "@storybook/components": "7.5.1",
-      "@storybook/core-events": "7.5.1",
-      "@storybook/preview-api": "7.5.1",
-      "@storybook/theming": "7.5.1",
-      "@storybook/types": "7.5.1",
-      "@storybook/channels": "7.5.1",
-      "@storybook/client-logger": "7.5.1",
-      "storybook-addon-vue-slots": "0.9.21"
+      "@babel/plugin-proposal-nullish-coalescing-operator": "npm:@babel/plugin-transform-nullish-coalescing-operator"
     }
   }
 }

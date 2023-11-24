@@ -1,43 +1,63 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from "@storybook-vue/nuxt";
 
 import {
   BankIdMedium,
   HouseHomeMedium,
   makeVueComponent,
-} from '@unionen/icons';
+} from "@unionen/icons";
 import {
   IButtonColor,
   IButtonSize,
   IButtonVariant,
-} from './types/UnionenButton.interface';
-import Button from './UnionenButton.vue';
+} from "./types/UnionenButton.interface";
+import Button from "./UnionenButton.vue";
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: 'Atoms/Buttons/Button',
-  parameters: {
-    layout: 'centered',
-  },
-  tags: ['autodocs'],
+  title: "Atoms/Buttons/Button",
+  tags: ["autodocs"],
   argTypes: {
     onClick: {},
     colorScheme: {
-      control: { type: 'radio' },
+      control: { type: "radio" },
       options: IButtonColor,
     },
     size: {
-      control: { type: 'radio' },
+      control: { type: "radio" },
       options: IButtonSize,
     },
     variant: {
-      control: { type: 'radio' },
+      control: { type: "radio" },
       options: IButtonVariant,
+    },
+    prepend: {
+      table: {
+        category: "Slots Cool",
+      },
+      description: "Fancy ass icon",
+    },
+    append: {
+      table: {
+        category: "Slots Cool",
+      },
+      control: { type: "string" },
+      name: "append",
+    },
+    default: {
+      table: {
+        category: "Slots Cool",
+      },
+      control: { type: "string" },
+      name: "slot: default",
     },
   },
   args: {
     colorScheme: IButtonColor.Primary,
     size: IButtonSize.Medium,
     variant: IButtonVariant.Contained,
+  },
+  parameters: {
+    layout: "centered",
   },
 };
 
@@ -48,7 +68,13 @@ export const ContainedPrimary: Story = {
   args: {
     size: IButtonSize.Medium,
     colorScheme: IButtonColor.Primary,
-    label: 'Button',
+  },
+  parameters: {
+    slots: {
+      default: {
+        template: "<span>hdhdhdhdhdh</span>",
+      },
+    },
   },
 };
 
@@ -56,7 +82,7 @@ export const ContainedSecondary: Story = {
   args: {
     colorScheme: IButtonColor.Secondary,
     size: IButtonSize.Medium,
-    label: 'Button',
+    label: "Button",
   },
 };
 
@@ -64,28 +90,28 @@ export const ContainedDestructive: Story = {
   args: {
     colorScheme: IButtonColor.Destructive,
     size: IButtonSize.Medium,
-    label: 'Button',
+    label: "Button",
   },
 };
 
 export const ContainedDisabled: Story = {
   args: {
     disabled: true,
-    label: 'Button',
+    label: "Button",
   },
 };
 
 export const ContainedPrimaryLongLabel: Story = {
   args: {
     ...ContainedPrimary.args,
-    label: 'Button with a really long label',
+    label: "Button with a really long label",
   },
 };
 
 export const ContainedPrimaryAsLink: Story = {
   args: {
     ...ContainedPrimary.args,
-    path: 'https://www.unionen.se',
+    path: "https://www.unionen.se",
   },
 };
 
@@ -99,7 +125,7 @@ export const ContainedPrimaryWithLeftIcon: Story = {
         components: {
           HouseHomeMedium: makeVueComponent(HouseHomeMedium as string),
         },
-        template: '<HouseHomeMedium />',
+        template: "<HouseHomeMedium />",
       },
     },
   },
@@ -115,7 +141,7 @@ export const ContainedPrimaryWithRightIcon: Story = {
         components: {
           HouseHomeMedium: makeVueComponent(HouseHomeMedium as string),
         },
-        template: '<HouseHomeMedium />',
+        template: "<HouseHomeMedium />",
       },
     },
   },
@@ -124,15 +150,15 @@ export const ContainedPrimaryWithRightIcon: Story = {
 export const SignWithBankId: Story = {
   args: {
     ...ContainedPrimary.args,
-    label: 'Sign with BankID',
+    label: "Sign with BankID",
   },
   parameters: {
     slots: {
       prepend: {
         components: {
-          BankIdMedium: makeVueComponent(BankIdMedium as string),
+          HouseHomeMedium: makeVueComponent(HouseHomeMedium as string),
         },
-        template: '<BankIdMedium />',
+        template: "<HouseHomeMedium />",
       },
     },
   },
@@ -142,7 +168,7 @@ export const TextPrimary: Story = {
   args: {
     size: IButtonSize.Medium,
     colorScheme: IButtonColor.Primary,
-    label: 'Button',
+    label: "Button",
     variant: IButtonVariant.Text,
   },
 };
@@ -151,7 +177,7 @@ export const TextSecondary: Story = {
   args: {
     size: IButtonSize.Medium,
     colorScheme: IButtonColor.Secondary,
-    label: 'Button',
+    label: "Button",
     variant: IButtonVariant.Text,
   },
 };
@@ -160,7 +186,7 @@ export const TextDestructive: Story = {
   args: {
     size: IButtonSize.Medium,
     colorScheme: IButtonColor.Destructive,
-    label: 'Button',
+    label: "Button",
     variant: IButtonVariant.Text,
   },
 };
@@ -182,7 +208,7 @@ export const TextPrimaryWithLeftIcon: Story = {
         components: {
           HouseHomeMedium: makeVueComponent(HouseHomeMedium as string),
         },
-        template: '<HouseHomeMedium />',
+        template: "<HouseHomeMedium />",
       },
     },
   },

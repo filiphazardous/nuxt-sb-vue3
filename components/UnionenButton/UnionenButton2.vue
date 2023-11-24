@@ -55,5 +55,4 @@ function onClick() {
       <slot name="append" />
     </div>
   </component>
-  <UnionenButton2 />
 </template>
